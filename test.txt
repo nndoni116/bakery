@@ -259,6 +259,7 @@ $(function() {
   }, 5000);
 });
 
+
 (素のjavascript)
 
 document.addEventListener('DOMContentLoaded', () => {
