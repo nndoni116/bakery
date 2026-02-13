@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (slides.length > 0) {
     slides[currentIndex].classList.add('active');
   }
-
+aaa
   // 3. 5秒ごとに実行するタイマーを作る
   setInterval(() => {
     // 現在表示されているスライドから「active」を消す
