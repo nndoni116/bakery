@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "バゲット",
+    "description": "外はパリパリ、中はふんわりとした定番のフランスパン。",
+    "image": "images/baguette.png"
+  },
+  {
+    "id": 2,
+    "title": "カンパーニュ",
+    "description": "自家製酵母が香る、ずっしりと大きな田舎パン。",
+    "image": "images/campagne.png"
+  },
+  {
+    "id": 3,
+    "title": "クルミパン",
+    "description": "香ばしいクルミを贅沢に練り込んだハードパン。",
+    "image": "images/walnut.png"
+  },
+  {
+    "id": 4,
+    "title": "レーズンパン",
+    "description": "じっくり漬け込んだレーズンの甘みが広がる一品。",
+    "image": "images/raisin.jpg"
+  },
+  {
+    "id": 5,
+    "title": "チーズフランス",
+    "description": "中からとろけ出す濃厚なチーズがたまらない一品。",
+    "image": "images/cheese.jpg"
+  }
+]

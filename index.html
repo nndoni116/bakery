@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パン屋</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+
+            <div class="header-logo">
+                <a href="#"><img src="./images/bread-logo.png" alt="パン屋ロゴ"></a>
+            </div>
+            <h1 class="header-title">ハード系のパン屋</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#news">news</a></li>
+                    <li><a href="#menu">menu</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-visual">
+            <div class="slide"><img src="./images/slide1.png" alt="焼き立てのカンパーニュ"></div>
+            <div class="slide"><img src="./images/slide2.png" alt="店内の様子"></div>
+            <div class="slide"><img src="./images/slide3.png" alt="厳選した小麦粉"></div>
+            <div class="main-title">
+                <p>日常の主役となるパンを</p>
+            </div>
+        </div>
+        <section id="news-section">
+            <h2>最新のお知らせ</h2>
+            <ul id="news-list">
+            </ul>
+            <a href="./news/allnews.html" class="view-all">すべてのお知らせを見る</a>
+        </section>
+        <section id="about-section">
+            <h2>パン屋について</h2>
+            <div class="about-description">
+                <p>当店が焼き上げるのは、自家製酵母と厳選した国産小麦、そして塩と水のみで作り上げるシンプルなハード系パンです。
+                    長時間じっくりと低温熟成させることで、外側はバリッと香ばしく、内側は驚くほどもっちりとした質感に仕上げました。
+                    毎日の食卓に、力強い小麦の味わいを添える一杯のワインやスープのような、そんな「日常の主役」となるパンをお届けします。</p>
+                <a href="#about" class="about-button">こだわりについて</a>
+            </div>
+        </section>
+        <section id="recent-menu-section">
+            <h2>最新のメニュー</h2>
+            <div id="recent-menu-contents">
+            </div>
+            <a href="#menu" class="view-all">すべてのメニュー</a>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./js/news.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/slide.js"></script>
+</body>
+
+</html>
