@@ -839,3 +839,123 @@ section {
   color: #888;
   line-height: 1.6;
 }
+
+
+*/========ABOUTページ＝＝＝＝＝＝＝＝＝＝/*
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT | ハード系のパン屋</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body id="about-page">
+
+    <header>
+        <div class="header-content">
+            <div class="header-logo">
+                <a href="./index.html"><img src="./images/bread-logo.png" alt="パン屋ロゴ"></a>
+            </div>
+            <h1 class="header-title">ハード系のパン屋</h1>
+            <nav>
+                <ul>
+                    <li><a href="./about.html">about</a></li>
+                    <li><a href="#news">news</a></li>
+                    <li><a href="#menu">menu</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="about-hero">
+            <img src="./images/about-main.png" alt="パン作りの風景">
+            <div class="about-hero-title">
+                <h2>私たちの想い</h2>
+                <p>Philosophy</p>
+            </div>
+        </div>
+
+        <section class="about-concept">
+            <div class="inner">
+                <h3>「噛むほどに、物語がはじまる。」</h3>
+                <p>
+                    当店のパン作りは、朝一番の粉の温度を測ることから始まります。<br>
+                    使用するのは、私たちが信頼する農家さんから届く国産小麦と、創業時から大切に育ててきた自家製酵母。<br>
+                    派手さはありませんが、飽きのこない、嘘のないパン作りを続けています。
+                </p>
+            </div>
+        </section>
+
+        <section class="about-points">
+            <div class="inner">
+                <div class="point-item">
+                    <span class="number">01</span>
+                    <h4>自家製酵母</h4>
+                    <p>季節ごとに表情を変える自家製酵母。時間をかけてゆっくり育てることで、独特の酸味と香りが生まれます。</p>
+                </div>
+                <div class="point-item">
+                    <span class="number">02</span>
+                    <h4>石窯での直火焼き</h4>
+                    <p>高温の石窯で一気に焼き上げることで、外側はバリッと、中は水分を閉じ込めたもっちり食感に。</p>
+                </div>
+                <div class="point-item">
+                    <span class="number">03</span>
+                    <h4>国産小麦の選定</h4>
+                    <p>日本各地の農家から届く小麦を、パンの種類に合わせて配合。素材本来の甘みを引き出します。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="eat-in-section" class="about-eatin">
+            <div class="eat-in-container">
+                <div class="eat-in-image">
+                    <img src="./images/eatin.png" alt="イートインスペース">
+                </div>
+                <div class="eat-in-text">
+                    <h2>イートインスペース</h2>
+                    <p class="eng-title">Eat-in Space</p>
+                    <div class="description">
+                        <p>焼きたてのパンをその場でお楽しみいただける、<br>開放的なカフェスペースをご用意しております。</p>
+                        <p>こだわりの自家焙煎コーヒーとともに、<br>ゆったりとしたひとときをお過ごしください。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="company-overview">
+            <div class="inner">
+                <div class="section-title-center">
+                    <h2>会社概要</h2>
+                    <p>Company Overview</p>
+                </div>
+                <dl class="company-list">
+                    <div class="company-row">
+                        <dt>会社名</dt>
+                        <dd>株式会社 Gemini Bakery</dd>
+                    </div>
+                    <div class="company-row">
+                        <dt>設立</dt>
+                        <dd>2010年4月</dd>
+                    </div>
+                    <div class="company-row">
+                        <dt>代表者</dt>
+                        <dd>代表取締役 山田 太郎</dd>
+                    </div>
+                    <div class="company-row">
+                        <dt>事業内容</dt>
+                        <dd>製パンの製造・販売、カフェ運営、自家焙煎コーヒーの卸売</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        </footer>
+
+</body>
+</html>
