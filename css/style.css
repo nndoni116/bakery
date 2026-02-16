@@ -8,41 +8,37 @@
   box-sizing: border-box;
 }
 
+
+
 /* ===============================================
     COMMON (全ページ共通)
    =============================================== */
 
-/* 基本設定 */
 
+
+/*===基本設定=== */
 
 
 :root {
-  /* 背景：真っ白なタイルや、朝の光 */
   --color-base: #FFFFFF;
 
-  /* 文字：深い海の底のような、知的なダークグレー */
   --color-text: #2F3E46;
 
-  /* メイン：ハーブやオリーブの葉のような、爽やかで武骨な緑 */
   --color-main: #F1F1F1;
 
-  /* アクセント：夜明けの空のような、透明感のあるブルー */
   --color-accent: #A8DADC;
 
-  /* 補助：明るいコンクリートや、清潔なリネン */
   --color-sub: #F1F1F1;
 
-  /* 共通のドット境界線：少し色を薄めて軽やかに */
   --border-dot: 1px dotted var(--color-main);
 }
 
 body {
   color: var(--color-text);
-  line-height: 1.8;
   background-color: var(--color-base);
+  line-height: 1.8;
   margin: 0;
   padding: 0;
-  /* background-image: url("../images/paper-bg.jpg"); */
 }
 
 a {
@@ -52,7 +48,8 @@ a {
 }
 
 
-/* ヘッダー*/
+/*===ヘッダー===*/
+
 
 header {
   overflow: visible;
@@ -75,17 +72,13 @@ header {
 
 header:has(.header-nav:hover) {
   background-color: var(--color-main);
-  /* 指定した深い茶色へ */
   backdrop-filter: blur(0px);
 }
 
 .header-content {
-  /* max-width: 1600px; */
   max-width: 100%;
   width: 100%;
-  /* margin: 0 auto; */
   margin: 0;
-  /* padding: 0 40px; */
   padding: 0;
   display: flex;
   align-items: center;
@@ -113,7 +106,6 @@ header:has(.header-nav:hover) {
 .header-nav ul {
   display: flex;
   gap: 100px;
-  /* リンク同士の間隔を広く */
   list-style: none;
 }
 
@@ -137,74 +129,54 @@ header:has(.header-nav:hover) {
 
 .header-nav a:hover {
   color: var(--color-accent);
-  /* ホバー時に真鍮色へ */
 }
 
-/* .header-title {
-  font-size: 20px;
-  letter-spacing: 0.1em;
-}
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
+/*===サブヘッダー===*/
 
-nav a {
-  font-size: 13px;
-  text-transform: uppercase;
-} */
 
-/* サブヘッダー */
-
-/* 下層ページ専用のヘッダー設定 */
-/* 下層ページ用：透過なし・変化なしのヘッダー */
 header.sub-header {
-  position: relative;        /* 浮かせずにコンテンツを押し下げる */
-  background-color: var(--color-base); /* 爽やかな白（または指定のベース色） */
+  position: relative;
+  background-color: var(--color-base);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   border-bottom: 1px solid var(--color-sub);
-  transition: none;          /* アニメーションを無効化 */
+  transition: none;
 }
 
-/* ★要望：カーソルを合わせても背景を変化させない */
 header.sub-header:has(.header-nav:hover) {
-  background-color: var(--color-base); /* 背景色を維持 */
+  background-color: var(--color-base);
   backdrop-filter: none;
 }
 
-/* ★要望：ロゴがヘッダー（10vh）からはみ出さないようにする */
 .sub-header .header-logo {
   height: 100%;
   display: flex;
-  align-items: center; /* 縦方向の中央に配置 */
+  align-items: center;
 }
 
 .sub-header .header-logo img {
-  /* 10vhの高さの中に収める（上下に少し余白を作るなら90%程度に） */
-  height: 100%; 
-  max-height: 10vh; 
+  height: 100%;
+  max-height: 10vh;
   width: auto;
   object-fit: contain;
+  padding-left: 180px;
 }
 
-/* ナビゲーションの文字色調整 */
 .sub-header .header-nav a {
-  color: var(--color-text); /* 常にテキストカラーを表示 */
+  color: var(--color-text);
 }
 
-/* ホバー時の文字色だけはアクセントカラーに変える（必要なければ削除してください） */
 .sub-header .header-nav a:hover {
   color: var(--color-accent);
 }
 
 
-/* フッター */
+/*===フッター===*/
+
 
 footer {
-  background-color: var(--color-sub); /* 明るい補助色（薄いグレー） */
+  background-color: var(--color-sub);
   color: var(--color-text);
   padding: 40px 0 40px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
@@ -215,12 +187,11 @@ footer {
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  flex-direction: column; /* 上から順番に並べる */
-  align-items: center;    /* 中央揃え */
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-/* 1. パン屋の名前 */
 .footer-shop-name {
   font-size: 28px;
   font-family: serif;
@@ -229,7 +200,6 @@ footer {
   margin-bottom: 20px;
 }
 
-/* 2. 住所 / 3. 電話番号 */
 .footer-info {
   margin-bottom: 5px;
 }
@@ -241,10 +211,9 @@ footer {
   color: var(--color-text);
 }
 
-/* 4. 横並びのサイトマップ */
 .footer-site-map {
   width: 100%;
-  border-top: var(--border-dot); /* rootで定義したドット線 */
+  border-top: var(--border-dot);
   border-bottom: var(--border-dot);
   padding: 25px 0;
   margin-bottom: 10px;
@@ -253,7 +222,7 @@ footer {
 .footer-site-map ul {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* 画面が狭い時に折り返す */
+  flex-wrap: wrap;
   gap: 30px;
   list-style: none;
 }
@@ -271,11 +240,10 @@ footer {
   color: var(--color-accent);
 }
 
-/* 5. SNSリンク */
 .footer-sns-links {
   display: flex;
   gap: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .footer-sns-links a {
@@ -288,10 +256,9 @@ footer {
 }
 
 .footer-sns-links a:hover {
-  color: var(--color-main);
+  color: var(--color-accent);
 }
 
-/* 6. コピーライト */
 .footer-copyright p {
   font-size: 10px;
   color: #999;
@@ -299,11 +266,15 @@ footer {
 }
 
 
+
 /* ===============================================
     トップページ
    =============================================== */
 
-/*メインビジュアル（スライドショー） */
+  
+   
+/*===メインビジュアル（スライドショー）===*/
+
 
 .main-visual {
   width: 100%;
@@ -332,7 +303,7 @@ footer {
   padding-bottom: 10px;
 }
 
-/* --- 各スライドの設定 --- */
+/*各スライドの設定*/
 
 .slide {
   width: 100%;
@@ -343,7 +314,7 @@ footer {
   opacity: 0;
   /* 最初は透明 */
   transition: opacity 2.5s ease-in-out, transform 12s linear;
-  /* 1.5秒かけてじわっと切り替え */
+  /* じわっと切り替え */
   transform: scale(1);
 }
 
@@ -363,7 +334,9 @@ footer {
   /* 少しグレー＆暗くして重厚感を出す */
 }
 
-/* ニュースセクション */
+
+/*===ニュースセクション===*/
+
 
 #news-section {
   width: 100%;
@@ -388,7 +361,6 @@ footer {
   gap: 0;
   flex-grow: 1;
 }
-
 
 /* タイトルグループ（縦並び・中央揃え） */
 
@@ -417,7 +389,6 @@ footer {
   text-transform: uppercase;
 }
 
-
 /* ニュースリスト */
 
 #news-list {
@@ -445,8 +416,7 @@ footer {
   border-radius: 2px;
 }
 
-
-/* 一覧を見るリンク（右寄せ） */
+/* 一覧を見るリンク */
 
 .news-divider {
   align-self: stretch;
@@ -468,22 +438,18 @@ footer {
 }
 
 
+/*===ABOUT / MENU / eat-in / shop information セクション===*/
 
-/*===== ABOUT / MENU セクション====== */
 
 section {
   margin: 0 auto 120px auto;
   padding: 0 20px;
 }
 
-
 /* アバウトセクション */
 
 #about-section {
-  /* text-align: center; */
-  /* align-items: center; */
   margin-top: 50px;
-  background-image: url("../images/white.jpg");
   background-size: cover;
 }
 
@@ -510,7 +476,6 @@ section {
   margin-bottom: 50px;
 }
 
-
 .about-button {
   display: inline-block;
   border: 1px solid #444;
@@ -523,12 +488,10 @@ section {
   color: #fff;
 }
 
-
 /* メニューセクション */
 
 #recent-menu-section {
   max-width: 1050px;
-  /* margin: 0 auto 120px auto; */
   padding: 0 20px;
   text-align: center;
 }
@@ -599,7 +562,7 @@ section {
   border-color: #444;
 }
 
-/* イートインセクション */
+/*イートインセクション */
 
 #eat-in-section {
   background-color: #fff;
@@ -614,10 +577,8 @@ section {
   display: flex;
   align-items: center;
   gap: 60px;
-
 }
 
-/* 画像エリア */
 .eat-in-image {
   flex: 1;
 }
@@ -630,7 +591,6 @@ section {
   box-shadow: 15px 15px 0 #e9ecef;
 }
 
-/* テキストエリア */
 .eat-in-text {
   flex: 1;
 }
@@ -657,7 +617,6 @@ section {
   margin-bottom: 20px;
 }
 
-/* インフォメーションリスト */
 .eat-in-info {
   list-style: none;
   padding: 0;
@@ -734,7 +693,6 @@ section {
   color: #888;
 }
 
-/* 右側：マップ */
 .shop-map {
   flex: 1.2;
   filter: grayscale(30%);
@@ -744,241 +702,29 @@ section {
 }
 
 
-/* ===============================================
-  トップページ
-   SP（スマホ・タブレット）用レスポンシブ設定
-   推奨ブレークポイント: 768px以下
-   =============================================== */
-
-@media (max-width: 768px) {
-
-  /* --- 全体の調整 --- */
-  section {
-    padding: 0 20px;
-    /* 横の余白を少し狭く */
-    margin-bottom: 80px;
-    /* セクション間の距離を縮める */
-  }
-
-  /* --- ヘッダー：縦並びに変更 --- */
-  .header-content {
-    flex-direction: column;
-    /* 要素を縦積みに */
-    gap: 15px;
-  }
-
-  nav ul {
-    gap: 15px;
-    /* メニュー間の隙間を調整 */
-    flex-wrap: wrap;
-    /* 画面幅が狭い時に折り返す */
-    justify-content: center;
-    /* 中央寄せ */
-  }
-
-  nav a {
-    font-size: 12px;
-    /* スマホでは少し文字を小さく */
-  }
-
-  /* --- メインビジュアル --- */
-  .main-visual {
-    height: 50vh;
-    /* スマホでは高さを少し抑える */
-  }
-
-  .main-title p {
-    font-size: 16px;
-    /* タイトル文字サイズ調整 */
-    width: 90%;
-    /* 画面からはみ出さないように */
-    margin: 0 auto;
-    line-height: 1.5;
-  }
-
-  /* --- ニュースセクション：複雑な構造を縦積みに --- */
-  .news-container {
-    flex-direction: column;
-    /* 縦並び */
-    padding: 0 20px;
-    align-items: flex-start;
-    /* 左揃え */
-  }
-
-  .news-left-content {
-    width: 100%;
-    margin-bottom: 10px;
-    border-bottom: 1px dotted #ccc;
-    /* 縦線の代わりに横線を入れる */
-    padding-bottom: 10px;
-  }
-
-  .news-title {
-    padding-right: 0;
-    align-items: flex-start;
-    /* タイトルを左寄せ */
-    flex-direction: row;
-    /* スマホでは「お知らせ」と「NEWS」を横並びに */
-    gap: 10px;
-    align-items: baseline;
-  }
-
-  #news-list {
-    padding: 0;
-    width: 100%;
-  }
-
-  #news-list li {
-    padding: 15px 0;
-    /* 横のパディングを消して広く使う */
-    flex-direction: column;
-    /* 日付と内容を縦積みに */
-    gap: 5px;
-    border-bottom: 1px solid #fff;
-    /* 区切り線 */
-  }
-
-  #news-list .date {
-    font-size: 12px;
-  }
-
-  .news-divider {
-    display: none;
-    /* スマホでは縦のドット線を消す */
-  }
-
-  .view-all {
-    align-self: flex-end;
-    /* 右下に配置 */
-    margin-top: 15px;
-  }
-
-  /* --- ABOUTセクション --- */
-  #about-section {
-    margin-top: 80px;
-    /* 余白を縮小 */
-  }
-
-  .about-description p {
-    text-align: left;
-    /* 長文は左揃えの方が読みやすい */
-  }
-
-  /* --- メニューセクション：2列表示 --- */
-  #recent-menu-contents {
-    grid-template-columns: repeat(2, 1fr);
-    /* 2列にする */
-    gap: 20px 15px;
-    /* 隙間を調整 */
-  }
-
-  .menu-item img {
-    width: 100%;
-    /* 親要素いっぱいに */
-    max-width: none;
-    /* 制限を解除 */
-  }
-
-  /* --- イートインセクション：縦積み --- */
-  .eat-in-container {
-    flex-direction: column;
-    /* 画像と文章を縦に */
-    gap: 30px;
-    padding: 0 20px;
-  }
-
-  .eat-in-image img {
-    height: 250px;
-    /* 画像の高さをスマホ用に調整 */
-    width: 100%;
-    box-shadow: 10px 10px 0 #e9ecef;
-    /* 影を少し小さく */
-  }
-
-  #eat-in-section h2,
-  .eng-title {
-    text-align: center;
-    /* タイトルは中央寄せ */
-  }
-
-  /* --- 店舗情報セクション：縦積み --- */
-  .shop-info-container {
-    flex-direction: column;
-    padding: 0 20px;
-    gap: 40px;
-  }
-
-  .shop-map {
-    width: 100%;
-    height: 300px;
-    /* 地図の高さを調整 */
-    flex: auto;
-    /* flex設定をリセット */
-  }
-
-  /* 定義リスト（dl）の調整 */
-  .info-item {
-    flex-direction: column;
-    /* 項目名と内容を縦積みに */
-    align-items: flex-start;
-    gap: 5px;
-  }
-
-  .info-item dt {
-    width: 100%;
-    font-size: 13px;
-    color: #888;
-    /* 項目名を少し薄く */
-  }
-
-  .info-item dd {
-    font-size: 16px;
-    /* 内容を大きく読みやすく */
-  }
-
-  /* --- フッター：縦積み --- */
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    /* 中央揃え */
-    gap: 50px;
-    text-align: center;
-  }
-
-  .footer-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-nav ul {
-    align-items: center;
-    /* メニューも中央揃え */
-  }
-
-  /* SNSリンクのドット位置調整 */
-  .footer-sns {
-    justify-content: center;
-  }
-}
 
 /* ===============================================
-  ABOUTページ
+    ABOUTページ
    =============================================== */
 
 
-/* 共通インナー幅 */
+
+/*===共通インナー幅===*/
+
+
 .inner {
   max-width: 1050px;
   margin: 0 auto;
   padding: 0 40px;
 }
 
-/* 1. メインビジュアル（30vh） */
+
+/*===メインビジュアル（30vh）===*/
+
+
 .about-hero {
   width: 100%;
   height: 30vh;
-  /* 画面高の30% */
   position: relative;
   overflow: hidden;
   background-color: #2c2c2c;
@@ -1005,7 +751,7 @@ section {
   letter-spacing: 0.2em;
 }
 
-/* 2. コンセプト */
+/*===コンセプト===*/
 .about-concept {
   padding: 120px 0;
   text-align: center;
@@ -1139,9 +885,106 @@ section {
 
 
 /* 4. イートイン（調整） */
-.about-eatin {
-  padding: 120px 0;
+/* イートインセクション全体の余白調整 */
+
+.inner {
+  max-width: 1050px;
+  /* サイト全体の幅に合わせる */
+  margin: 0 auto;
+  /* ★左右の余白を自動にして中央へ */
+  padding: 0 20px;
 }
+
+
+.about-eatin {
+  padding: 100px 0;
+  background-color: var(--color-base);
+  /* 爽やかな白 */
+}
+
+/* 中央揃えのタイトル */
+.section-title-center {
+  width: 100%;
+  /* 幅をいっぱいにする */
+  display: flex;
+  /* Flexboxを使用 */
+  flex-direction: column;
+  align-items: center;
+  /* ★水平方向の中央揃え */
+  text-align: center;
+  /* テキスト自体も中央揃え */
+  margin-bottom: 50px;
+}
+
+.section-title-center h2 {
+  margin: 0;
+  /* 余計なマージンをリセット */
+  display: inline-block;
+}
+
+.section-title-center .eng-title {
+  margin: 10px 0 0 0;
+  display: block;
+}
+
+/* 大きなメイン画像 */
+.eat-in-main-image {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+}
+
+.eat-in-main-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  /* 武骨な印象にするため、あえて角丸はつけない */
+}
+
+/* イントロテキスト */
+.eat-in-intro-text {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.eat-in-intro-text p {
+  font-size: 16px;
+  line-height: 2;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+/* 詳細情報（リスト形式） */
+.eat-in-details {
+  max-width: 700px;
+  margin: 0 auto;
+  border-top: var(--border-dot);
+  /* rootで決めたドット線 */
+  padding-top: 20px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+  /* 薄い境界線 */
+}
+
+.detail-row dt {
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--color-main);
+  width: 30%;
+}
+
+.detail-row dd {
+  width: 70%;
+  font-size: 14px;
+  color: var(--color-text);
+  text-align: right;
+}
+
 
 /* 5. 会社概要（シンプルかつ上品な表形式） */
 .company-overview {
@@ -1186,104 +1029,6 @@ section {
 }
 
 
-/* ===============================================
-   ABOUTページ：スマホ用調整
-   =============================================== */
-
-@media (max-width: 768px) {
-
-  /* --- メインビジュアル（ABOUT専用） --- */
-  .about-hero {
-    height: 30vh;
-    /* 高さを維持しつつ中の文字サイズを調整 */
-  }
-
-  .about-hero-title h2 {
-    font-size: 20px;
-    letter-spacing: 0.1em;
-  }
-
-  /* --- コンセプト --- */
-  .about-concept {
-    padding: 60px 0;
-  }
-
-  .about-concept p {
-    font-size: 14px;
-    text-align: left;
-    /* スマホでは左寄せが読みやすい */
-    line-height: 2;
-  }
-
-  /* --- こだわり三つ（互い違いレイアウトの解消） --- */
-  .point-item {
-    padding: 60px 0;
-    background-attachment: scroll;
-    /* スマホではパララックスをオフにする（挙動が不安定になるため） */
-  }
-
-  .point-inner,
-  .point-right-img .point-inner {
-    flex-direction: column;
-    /* 全て縦並びに */
-    gap: 0;
-    /* 画像とテキストの間の隙間をゼロに */
-    padding: 0 20px;
-  }
-
-  .point-image {
-    width: 100%;
-  }
-
-  .point-image img {
-    height: 250px;
-    box-shadow: none;
-    /* スマホでは影が重すぎるので外す */
-  }
-
-  .point-text {
-    width: 100%;
-    padding: 30px 20px;
-    margin-top: -30px;
-    /* 画像に少し被せるように配置 */
-    position: relative;
-    z-index: 3;
-  }
-
-  .point-text .number {
-    font-size: 30px;
-  }
-
-  .point-text h4 {
-    font-size: 18px;
-  }
-
-  /* --- 会社概要（Company Overview） --- */
-  .company-overview {
-    padding: 60px 0;
-  }
-
-  .company-list {
-    padding: 0 10px;
-  }
-
-  .company-row {
-    flex-direction: column;
-    /* 項目名と内容を縦並びに */
-    padding: 15px 0;
-    gap: 5px;
-  }
-
-  .company-row dt {
-    width: 100%;
-    font-size: 12px;
-    color: #888;
-  }
-
-  .company-row dd {
-    font-size: 15px;
-  }
-}
 
 
 /* ========
@@ -1474,27 +1219,6 @@ section {
   background-color: #555;
 }
 
-/* スマホ対応 */
-@media (max-width: 768px) {
-  .contact-form-section {
-    padding: 60px 0;
-  }
-
-  .contact-intro {
-    font-size: 14px;
-    padding: 0 20px;
-  }
-
-  .contact-form {
-    padding: 0 20px;
-  }
-
-  .submit-btn {
-    width: 100%;
-    padding: 18px;
-  }
-}
-
 /* ===============================================
    MENU PAGE STYLES
    =============================================== */
@@ -1590,23 +1314,103 @@ section {
   line-height: 1.6;
 }
 
-/* スマホ対応 */
-@media (max-width: 768px) {
-  .recommend-grid {
-    flex-direction: column;
-  }
-
-  .menu-grid {
-    grid-template-columns: 1fr;
-    /* スマホでは1列に */
-    gap: 40px;
-  }
-
-  .category-title {
-    font-size: 20px;
-  }
+.menu-side {
+  padding: 80px 0;
+  background-color: #fff;
 }
 
+.side-menu-container {
+  display: flex;
+  gap: 80px; /* スープとドリンクの間隔 */
+  justify-content: center;
+}
+
+.side-menu-group {
+  flex: 1;
+  max-width: 400px;
+}
+
+.side-group-title {
+  font-size: 20px;
+  color: var(--color-main);
+  border-bottom: 2px solid var(--color-main);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  letter-spacing: 0.2em;
+}
+
+.side-menu-group dt {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--color-text);
+  margin-bottom: 5px;
+}
+
+.side-menu-group dd {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 25px;
+  margin-left: 0;
+}
+
+.side-menu-group .price {
+  font-family: serif;
+}
+
+/* ランチセクション背景色（少しだけトーンを変えて区切りを意識） */
+.menu-lunch {
+  padding: 100px 0;
+  background-color: var(--color-base); 
+  border-top: 1px solid var(--color-sub);
+}
+
+/* 価格タグの装飾 */
+.menu-card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.menu-card-img-wrapper .price {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--color-main);
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+/* ランチの注意書き */
+.lunch-note {
+  margin-top: 60px;
+  text-align: center;
+  padding: 30px;
+  border: 1px solid var(--color-sub);
+  background-color: #fff;
+}
+
+.lunch-note p {
+  font-size: 13px;
+  color: var(--color-text);
+  line-height: 2;
+  margin: 0;
+}
+
+/* 既存のmenu-cardとの微調整 */
+.menu-lunch .menu-card h4 {
+  color: var(--color-main); /* ランチタイトルをメインカラーに */
+  margin-top: 10px;
+}
+
+.menu-lunch .menu-card img {
+  margin-bottom: 0; /* ラッパーで余白を制御するため */
+  filter: none;     /* 料理は美味しそうに見せるためグレースケールを解除 */
+}
 
 /* =========
   ACCESS PAGE 
