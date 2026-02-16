@@ -42,7 +42,7 @@ body {
   background-color: var(--color-base);
   margin: 0;
   padding: 0;
-  background-image: url("../images/paper-bg.jpg");
+  /* background-image: url("../images/paper-bg.jpg"); */
 }
 
 a {
@@ -107,12 +107,12 @@ header:has(.header-nav:hover) {
 }
 
 .header-nav {
-  margin: 0 30px 0 350px;
+  margin: 0 30px 0 400px;
 }
 
 .header-nav ul {
   display: flex;
-  gap: 70px;
+  gap: 100px;
   /* リンク同士の間隔を広く */
   list-style: none;
 }
@@ -156,98 +156,145 @@ nav a {
   text-transform: uppercase;
 } */
 
+/* サブヘッダー */
+
+/* 下層ページ専用のヘッダー設定 */
+/* 下層ページ用：透過なし・変化なしのヘッダー */
+header.sub-header {
+  position: relative;        /* 浮かせずにコンテンツを押し下げる */
+  background-color: var(--color-base); /* 爽やかな白（または指定のベース色） */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid var(--color-sub);
+  transition: none;          /* アニメーションを無効化 */
+}
+
+/* ★要望：カーソルを合わせても背景を変化させない */
+header.sub-header:has(.header-nav:hover) {
+  background-color: var(--color-base); /* 背景色を維持 */
+  backdrop-filter: none;
+}
+
+/* ★要望：ロゴがヘッダー（10vh）からはみ出さないようにする */
+.sub-header .header-logo {
+  height: 100%;
+  display: flex;
+  align-items: center; /* 縦方向の中央に配置 */
+}
+
+.sub-header .header-logo img {
+  /* 10vhの高さの中に収める（上下に少し余白を作るなら90%程度に） */
+  height: 100%; 
+  max-height: 10vh; 
+  width: auto;
+  object-fit: contain;
+}
+
+/* ナビゲーションの文字色調整 */
+.sub-header .header-nav a {
+  color: var(--color-text); /* 常にテキストカラーを表示 */
+}
+
+/* ホバー時の文字色だけはアクセントカラーに変える（必要なければ削除してください） */
+.sub-header .header-nav a:hover {
+  color: var(--color-accent);
+}
+
+
 /* フッター */
 
 footer {
-  background-color: #2c2c2c;
-  /* ヘッダーと同じ深いグレー */
-  color: #fff;
-  padding: 80px 0 20px 0;
-  /* 下側はコピーライトがあるので少し狭く */
+  background-color: var(--color-sub); /* 明るい補助色（薄いグレー） */
+  color: var(--color-text);
+  padding: 40px 0 40px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .footer-container {
   max-width: 1050px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-/* 左側：ロゴとキャッチコピー */
-.footer-logo img {
-  height: 40px;
-  margin-bottom: 10px;
-}
-
-.footer-logo p {
-  font-size: 12px;
-  color: #aaa;
-  letter-spacing: 0.1em;
-}
-
-/* SNSリンク（ドット線を使ったデザインを継承） */
-.footer-sns {
-  margin-top: 30px;
-  display: flex;
-  gap: 20px;
-}
-
-.footer-sns a {
-  font-size: 12px;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  position: relative;
-  padding-left: 15px;
-}
-
-/* ニュースセクションのドットの雰囲気をSNSリンクの前にも */
-.footer-sns a::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 4px;
-  background-color: #fff;
-  border-radius: 50%;
-  /* 小さな白いドット */
-}
-
-/* 右側：ナビゲーション */
-.footer-nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  text-align: right;
-}
-
-.footer-nav a {
-  font-size: 13px;
-  color: #ccc;
-  letter-spacing: 0.2em;
-}
-
-.footer-nav a:hover {
-  color: #fff;
-}
-
-/* 最下部：コピーライト */
-.footer-bottom {
-  margin-top: 60px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  /* ほんの少しだけ見える線 */
+  flex-direction: column; /* 上から順番に並べる */
+  align-items: center;    /* 中央揃え */
   text-align: center;
 }
 
-.footer-bottom p {
+/* 1. パン屋の名前 */
+.footer-shop-name {
+  font-size: 28px;
+  font-family: serif;
+  letter-spacing: 0.2em;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+/* 2. 住所 / 3. 電話番号 */
+.footer-info {
+  margin-bottom: 5px;
+}
+
+.footer-info p {
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+}
+
+/* 4. 横並びのサイトマップ */
+.footer-site-map {
+  width: 100%;
+  border-top: var(--border-dot); /* rootで定義したドット線 */
+  border-bottom: var(--border-dot);
+  padding: 25px 0;
+  margin-bottom: 10px;
+}
+
+.footer-site-map ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* 画面が狭い時に折り返す */
+  gap: 30px;
+  list-style: none;
+}
+
+.footer-site-map a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--color-text);
+  letter-spacing: 0.1em;
+  transition: color 0.3s;
+}
+
+.footer-site-map a:hover {
+  color: var(--color-accent);
+}
+
+/* 5. SNSリンク */
+.footer-sns-links {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.footer-sns-links a {
+  text-decoration: none;
+  font-size: 12px;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  position: relative;
+}
+
+.footer-sns-links a:hover {
+  color: var(--color-main);
+}
+
+/* 6. コピーライト */
+.footer-copyright p {
   font-size: 10px;
-  color: #777;
+  color: #999;
   letter-spacing: 0.05em;
 }
 
