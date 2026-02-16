@@ -751,17 +751,14 @@ section {
   letter-spacing: 0.2em;
 }
 
+
 /*===コンセプト===*/
+
+
 .about-concept {
   padding: 120px 0;
   text-align: center;
   background-color: #fff;
-}
-
-.about-concept h3 {
-  font-size: 24px;
-  color: #444;
-  margin-bottom: 40px;
 }
 
 .about-concept p {
@@ -770,10 +767,7 @@ section {
   font-size: 15px;
 }
 
-/* 3. 三つのこだわり（カード型レイアウト） */
-/* ===============================================
-   ABOUTページ：こだわりセクション（互い違い & 背景画像）
-   =============================================== */
+/* 三つのこだわり*/
 
 .about-points {
   width: 100%;
@@ -793,17 +787,16 @@ section {
 #point-01 {
   background-image: url('../images/bg-flour.jpg');
 }
-
 /* 小麦粉の背景 */
+
 #point-02 {
   background-image: url('../images/bg-wood.jpg');
 }
-
 /* 木目の背景 */
+
 #point-03 {
   background-image: url('../images/bg-breads.jpg');
 }
-
 /* パンが並ぶ背景 */
 
 /* 背景を少し暗くしてテキストを浮き立たせるオーバーレイ */
@@ -836,7 +829,6 @@ section {
   flex-direction: row-reverse;
 }
 
-/* 画像エリア */
 .point-image {
   flex: 1;
 }
@@ -846,10 +838,8 @@ section {
   height: 400px;
   object-fit: cover;
   box-shadow: 20px 20px 0 rgba(44, 44, 44, 0.8);
-  /* チャコールグレーの飾り影 */
 }
 
-/* テキストエリア（白い半透明ボックス） */
 .point-text {
   flex: 1;
   background: rgba(255, 255, 255, 0.9);
@@ -889,7 +879,6 @@ section {
 
 .inner {
   max-width: 1050px;
-  /* サイト全体の幅に合わせる */
   margin: 0 auto;
   /* ★左右の余白を自動にして中央へ */
   padding: 0 20px;
@@ -899,26 +888,19 @@ section {
 .about-eatin {
   padding: 100px 0;
   background-color: var(--color-base);
-  /* 爽やかな白 */
 }
 
-/* 中央揃えのタイトル */
 .section-title-center {
   width: 100%;
-  /* 幅をいっぱいにする */
   display: flex;
-  /* Flexboxを使用 */
   flex-direction: column;
   align-items: center;
-  /* ★水平方向の中央揃え */
   text-align: center;
-  /* テキスト自体も中央揃え */
   margin-bottom: 50px;
 }
 
 .section-title-center h2 {
   margin: 0;
-  /* 余計なマージンをリセット */
   display: inline-block;
 }
 
@@ -927,7 +909,6 @@ section {
   display: block;
 }
 
-/* 大きなメイン画像 */
 .eat-in-main-image {
   width: 100%;
   max-width: 1000px;
@@ -941,7 +922,6 @@ section {
   /* 武骨な印象にするため、あえて角丸はつけない */
 }
 
-/* イントロテキスト */
 .eat-in-intro-text {
   text-align: center;
   margin-bottom: 60px;
@@ -974,7 +954,7 @@ section {
 .detail-row dt {
   font-weight: bold;
   font-size: 14px;
-  color: var(--color-main);
+  color: var(--color-text);
   width: 30%;
 }
 
@@ -1034,6 +1014,9 @@ section {
 /* ========
    NEWSページ：お知らせ一覧
 ================= */
+
+
+
 .news-list-section {
   padding: 80px 0 120px;
   min-height: 600px;
