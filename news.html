@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>パン屋</title>
+  <title>NEWS | ハード系のパン屋</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body id="news-page">
 
   <header>
     <div class="header-content">
@@ -29,142 +29,53 @@
   </header>
 
   <main>
-    <div class="main-visual">
-      <div class="slide"><img src="./images/slide1.png" alt="焼き立てのカンパーニュ"></div>
-      <div class="slide"><img src="./images/slide2.png" alt="店内の様子"></div>
-      <div class="slide"><img src="./images/slide3.png" alt="厳選した小麦粉"></div>
-      <div class="main-title">
-        <p>日常の主役となるパンを</p>
+    <div class="news-hero about-hero">
+      <img src="./images/news-main-visual.png" alt="焼き立てのパン">
+      <div class="about-hero-title">
+        <h2>おしらせ</h2>
+        <p>NEWS</p>
       </div>
     </div>
-    <section id="news-section">
-      <div class="news-container">
-        <div class="news-left-contents">
-          <div class="news-title">
-            <h2>お知らせ</h2>
-            <p>news</p>
-          </div>
-        </div>
-        <ul id="news-list">
-        </ul>
-        <div class="news-divider"></div>
-        <a href="./news/allnews.html" class="view-all">一覧を見る</a>
-      </div>
-    </section>
-    <section id="about-section">
-      <h2>パン屋について</h2>
-      <p class="about-mini-title">about</p>
-      <div class="about-description">
-        <p>
-          当店が焼き上げるのは、自家製酵母と厳選した国産小麦、そして塩と水のみで作り上げるシンプルなハード系パンです。<br>
-          長時間じっくりと低温熟成させることで、外側はバリッと香ばしく、内側は驚くほどもっちりとした質感に仕上げました。<br>
-          毎日の食卓に、力強い小麦の味わいを添える一杯のワインやスープのような、そんな「日常の主役」となるパンをお届けします。
-        </p>
-        <a href="#about" class="about-button">こだわりについて</a>
-      </div>
-    </section>
-    <section id="recent-menu-section">
-      <h2>最新のメニュー</h2>
-      <p class="menu-mini-title">menu</p>
-      <div id="recent-menu-contents">
-      </div>
-      <a href="#menu" class="view-all">すべてのメニュー</a>
-    </section>
-    <section id="eat-in-section">
-      <div class="eat-in-container">
-        <div class="eat-in-image">
-          <img src="./images/eatin.png" alt="落ち着いた雰囲気のイートインスペース">
-        </div>
-        <div class="eat-in-text">
-          <h2>イートインスペース</h2>
-          <p class="eng-title">Eat-in Space</p>
-          <div class="description">
-            <p>焼きたてのパンをその場でお楽しみいただける、<br>開放的なカフェスペースをご用意しております。</p>
-            <p>こだわりの自家焙煎コーヒーとともに、<br>ゆったりとした朝のひとときやランチタイムをお過ごしください。</p>
-          </div>
-          <ul class="eat-in-info">
-            <li><span>座席数：</span>12席（テラス席あり）</li>
-            <li><span>設備：</span>Free Wi-Fi / コンセント完備</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section id="shop-info-section">
-      <div class="shop-info-container">
-        <div class="shop-details">
-          <h2>店舗情報</h2>
-          <p class="eng-title">Shop Information</p>
 
-          <dl class="info-list">
-            <div class="info-item">
-              <dt>店名</dt>
-              <dd>ハード系のパン屋</dd>
-            </div>
-            <div class="info-item">
-              <dt>営業時間</dt>
-              <dd>8:00 〜 18:00（完売次第終了）</dd>
-            </div>
-            <div class="info-item">
-              <dt>定休日</dt>
-              <dd>火曜日・水曜日</dd>
-            </div>
-            <div class="info-item">
-              <dt>住所</dt>
-              <dd>〒000-0000<br>石川県金沢市〇〇町 1-2-3</dd>
-            </div>
-            <div class="info-item">
-              <dt>電話番号</dt>
-              <dd>076-000-0000</dd>
-            </div>
-          </dl>
+    <section class="news-list-section">
+      <div class="inner">
+        <ul class="news-archive-list" id="news-list"></ul>
 
-          <div class="access-note">
-            <p>※駐車場 5台完備（店舗裏手）</p>
-            <p>※金沢駅から徒歩10分</p>
-          </div>
-        </div>
-
-        <div class="shop-map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.825832703!2d136.6457123!3d36.5626084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDMzJzQ1LjQiTiAxMzbaseAwOCczNC42IkU!5e0!3m2!1sja!2sjp!4v1234567890"
-            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-          </iframe>
-        </div>
+        <div id="pagination" class="pagination"></div>
       </div>
     </section>
+
+    <div class="decoration-cobblestone"></div>
+
   </main>
   <footer>
     <div class="footer-container">
-        <div class="footer-left">
-            <div class="footer-logo">
-                <img src="./images/footer-logo.png" alt="Gemini Bakery">
-                <p>焼きたてパンのある、豊かな暮らし</p>
-            </div>
-            <div class="footer-sns">
-                <a href="#" aria-label="Instagram">Instagram</a>
-                <a href="#" aria-label="Facebook">Facebook</a>
-            </div>
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="./images/footer-logo.png" alt="Gemini Bakery">
+          <p>焼きたてパンのある、豊かな暮らし</p>
         </div>
+        <div class="footer-sns">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Facebook">Facebook</a>
+        </div>
+      </div>
 
-        <nav class="footer-nav">
-            <ul>
+      <nav class="footer-nav">
+        <ul>
           <li><a href="about.html">about</a></li>
           <li><a href="news.html">news</a></li>
           <li><a href="menu.html">menu</a></li>
           <li><a href="contact.html">contact</a></li>
-            </ul>
-        </nav>
+        </ul>
+      </nav>
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2026 Gemini Bakery. All Rights Reserved.</p>
+      <p>&copy; 2026 Gemini Bakery. All Rights Reserved.</p>
     </div>
-</footer>
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
-  <script src="./js/news.js"></script>
-  <script src="./js/menu.js"></script>
-  <script src="./js/slide.js"></script>
+  </footer>
+ <script src="./js/news-display.js"></script>
 </body>
 
 </html>
