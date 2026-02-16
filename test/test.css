@@ -1,0 +1,135 @@
+header {
+    /* 固定配置で画像の上に被せる */
+    overflow: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    /* ヘッダーの高さ */
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    /* 透過設定 */
+    background-color: rgba(238, 228, 228, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+
+    /* アニメーション：透過が戻る時の動きをスムーズに */
+    transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+/* ★要望：ナビゲーションにホバーした時、ヘッダー全体の透過をなくす */
+header:has(.header-nav:hover) {
+    background-color: var(--color-main);
+    /* 指定した深い茶色へ */
+    backdrop-filter: blur(0px);
+}
+
+.header-content {
+max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center; /* ナビを中央に */
+  position: relative; /* ロゴの基準点 */
+  height: 100%; /* 親の10vhを引き継ぐ */
+}
+
+/* ★要望：ロゴを左端に独立 */
+.header-logo {
+position: absolute;
+  /* コンテンツエリア（1600px）の左端（paddingの内側）に配置 */
+  left: 40px; 
+  /* 要望：上端に合わせる */
+  top: 0; 
+  z-index: 110;
+}
+
+.header-logo img {
+    height: 60px;
+    /* 少し大きくして存在感を */
+    width: auto;
+}
+
+/* ★要望：ナビを中央に、かつ大きく */
+.header-nav {
+    margin: 0 auto;
+    /* 中央寄せ */
+}
+
+.header-nav ul {
+    display: flex;
+    gap: 60px;
+    /* リンク同士の間隔を広く */
+    list-style: none;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #fff;
+    /* 背景画像の上で見やすいよう白に */
+    font-size: 18px;
+    /* 大きく表示 */
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    /* 文字間隔を広げて武骨な高級感を */
+    transition: color 0.3s;
+}
+
+.header-nav a:hover {
+    color: var(--color-accent);
+    /* ホバー時に真鍮色へ */
+}
+
+
+
+
+.header-content {
+  max-width: 100%; /* 幅を画面いっぱいにする */
+  width: 100%;
+  margin: 0;       /* 中央寄せを解除 */
+  padding: 0;      /* 左右の余白を完全になくす */
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.header-logo {
+  position: absolute;
+  left: 0;         /* 画面の左端に吸い付かせる */
+  line-height: 0;  /* 画像の下にできる微細な隙間を解消 */
+}
+
+.header-logo img {
+  height: 150px;   /* ロゴの大きさは維持 */
+  width: auto;
+  display: block;  /* インライン要素の隙間を排除 */
+}
+
+.header-nav {
+  margin: 0 auto;  /* ナビゲーションは引き続き「画面の中央」に配置 */
+}
+
+
+:root {
+  /* 背景：真っ白なタイルや、朝の光 */
+  --color-base: #FFFFFF;
+
+  /* 文字：深い海の底のような、知的なダークグレー */
+  --color-text: #2F3E46;
+
+  /* メイン：ハーブやオリーブの葉のような、爽やかで武骨な緑 */
+  --color-main: #FFFFFF;
+
+  /* アクセント：夜明けの空のような、透明感のあるブルー */
+  --color-accent: #A8DADC;
+
+  /* 補助：明るいコンクリートや、清潔なリネン */
+  --color-sub: #F1F1F1;
+
+  /* 共通のドット境界線：少し色を薄めて軽やかに */
+  --border-dot: 1px dotted var(--color-main);
+}
