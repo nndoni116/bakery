@@ -19,7 +19,7 @@
 /*===基本設定=== */
 
 
-:root {
+/* :root {
   --color-base: #FFFFFF;
 
   --color-text: #2F3E46;
@@ -31,7 +31,51 @@
   --color-sub: #F1F1F1;
 
   --border-dot: 1px dotted var(--color-main);
+} */
+
+:root {
+
+  --color-base: #FAF9F6;
+
+  --color-header: #FAF9F6;
+
+  --color-text: #2D2926;
+
+  --color-text2: #a19e9e;
+
+  --color-main: #F0EDE5;
+
+  --color-accent: #D7C4A3;
+
+  --color-sub: #E0E0E0;
 }
+
+/* :root {
+  
+  --color-base: #FAF9F6;
+  
+  --color-text: #3C2F2F;
+   
+  --color-main: #6B705C;
+  
+  --color-accent: #B79D5C;
+  
+  --color-sub: #F0EDE5;
+} */
+
+
+/* :root {
+  
+  --color-base: #FFFFFF;
+   
+  --color-text: #1B263B;
+  
+  --color-main: #415A77;
+  
+  --color-accent: #A67C52;
+
+  --color-sub: #EDF2F4;
+}  */
 
 body {
   color: var(--color-text);
@@ -62,7 +106,7 @@ header {
   display: flex;
   align-items: center;
   /* 透過設定（初期状態） */
-  background-color: rgb(238, 228, 228, 0.3);
+  background-color: rgb(238, 228, 228, 0.7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -71,7 +115,7 @@ header {
 }
 
 header:has(.header-nav:hover) {
-  background-color: var(--color-main);
+  background-color: var(--color-header);
   backdrop-filter: blur(0px);
 }
 
@@ -95,12 +139,14 @@ header:has(.header-nav:hover) {
 
 .header-logo img {
   height: 130px;
-  width: auto;
+  width: 120px;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
 .header-nav {
-  margin: 0 30px 0 400px;
+  margin: 0 30px 0 280px;
 }
 
 .header-nav ul {
@@ -128,7 +174,7 @@ header:has(.header-nav:hover) {
 }
 
 .header-nav a:hover {
-  color: var(--color-accent);
+  color: var(--color-text2);
 }
 
 
@@ -137,17 +183,17 @@ header:has(.header-nav:hover) {
 
 header.sub-header {
   position: relative;
-  background-color: var(--color-base);
+  background-color: var(--color-header);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   border-bottom: 1px solid var(--color-sub);
   transition: none;
 }
 
-header.sub-header:has(.header-nav:hover) {
-  background-color: var(--color-base);
+/* header.sub-header:has(.header-nav:hover) {
+  background-color: var(--color-header);
   backdrop-filter: none;
-}
+} */
 
 .sub-header .header-logo {
   height: 100%;
@@ -160,7 +206,7 @@ header.sub-header:has(.header-nav:hover) {
   max-height: 10vh;
   width: auto;
   object-fit: contain;
-  padding-left: 180px;
+  padding-left: 140px;
 }
 
 .sub-header .header-nav a {
@@ -168,7 +214,7 @@ header.sub-header:has(.header-nav:hover) {
 }
 
 .sub-header .header-nav a:hover {
-  color: var(--color-accent);
+  color: var(--color-text2);
 }
 
 
@@ -237,7 +283,7 @@ footer {
 }
 
 .footer-site-map a:hover {
-  color: var(--color-accent);
+  color: var(--color-text2);
 }
 
 .footer-sns-links {
@@ -256,7 +302,7 @@ footer {
 }
 
 .footer-sns-links a:hover {
-  color: var(--color-accent);
+  color: var(--color-text2);
 }
 
 .footer-copyright p {
@@ -271,8 +317,8 @@ footer {
     トップページ
    =============================================== */
 
-  
-   
+
+
 /*===メインビジュアル（スライドショー）===*/
 
 
@@ -449,8 +495,9 @@ section {
 /* アバウトセクション */
 
 #about-section {
-  margin-top: 50px;
+  margin-top: 30px;
   background-size: cover;
+  background-color: var(--color-main);
 }
 
 #about-section .about-mini-title {
@@ -467,6 +514,23 @@ section {
   padding: 50px 0;
   align-items: center;
   text-align: center;
+  position: relative;
+}
+
+.about-content img {
+  height: 100px;
+}
+
+.hb-img1 {
+  position: absolute;
+  top: 30px;
+  left: 200px;
+}
+
+.hb-img2 {
+  position: absolute;
+  top: 30px;
+  left: 730px;
 }
 
 .about-description p {
@@ -491,9 +555,13 @@ section {
 /* メニューセクション */
 
 #recent-menu-section {
-  max-width: 1050px;
+  max-width: 1200px;
   padding: 0 20px;
   text-align: center;
+  /* background-image: url("../images/vintage-frame.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
 }
 
 #recent-menu-section .menu-mini-title {
@@ -787,16 +855,19 @@ section {
 #point-01 {
   background-image: url('../images/bg-flour.jpg');
 }
+
 /* 小麦粉の背景 */
 
 #point-02 {
   background-image: url('../images/bg-wood.jpg');
 }
+
 /* 木目の背景 */
 
 #point-03 {
   background-image: url('../images/bg-breads.jpg');
 }
+
 /* パンが並ぶ背景 */
 
 /* 背景を少し暗くしてテキストを浮き立たせるオーバーレイ */
@@ -1010,10 +1081,9 @@ section {
 
 
 
-
-/* ========
-   NEWSページ：お知らせ一覧
-================= */
+/* ===============================================
+    NEWSページ
+   =============================================== */
 
 
 
@@ -1206,7 +1276,10 @@ section {
    MENU PAGE STYLES
    =============================================== */
 
-/* 今月のおすすめセクション */
+
+/*===今月のおすすめセクション===*/
+
+
 .menu-recommend {
   padding: 100px 0;
   background-color: #fcfcfc;
@@ -1304,7 +1377,8 @@ section {
 
 .side-menu-container {
   display: flex;
-  gap: 80px; /* スープとドリンクの間隔 */
+  gap: 80px;
+  /* スープとドリンクの間隔 */
   justify-content: center;
 }
 
@@ -1345,7 +1419,7 @@ section {
 /* ランチセクション背景色（少しだけトーンを変えて区切りを意識） */
 .menu-lunch {
   padding: 100px 0;
-  background-color: var(--color-base); 
+  background-color: var(--color-base);
   border-top: 1px solid var(--color-sub);
 }
 
@@ -1386,18 +1460,21 @@ section {
 
 /* 既存のmenu-cardとの微調整 */
 .menu-lunch .menu-card h4 {
-  color: var(--color-main); /* ランチタイトルをメインカラーに */
+  color: var(--color-main);
+  /* ランチタイトルをメインカラーに */
   margin-top: 10px;
 }
 
 .menu-lunch .menu-card img {
-  margin-bottom: 0; /* ラッパーで余白を制御するため */
-  filter: none;     /* 料理は美味しそうに見せるためグレースケールを解除 */
+  margin-bottom: 0;
+  /* ラッパーで余白を制御するため */
+  filter: none;
+  /* 料理は美味しそうに見せるためグレースケールを解除 */
 }
 
-/* =========
-  ACCESS PAGE 
-===========*/
+/* ===============================================
+    ACCESSページ
+   =============================================== */
 
 
 .access-container {
@@ -1447,20 +1524,12 @@ section {
 }
 
 
-/* スマホ対応 */
-@media (max-width: 768px) {
-  .access-container {
-    flex-direction: column;
-  }
 
-  .map-dummy {
-    height: 300px;
-  }
-}
+/* ===============================================
+    PRIVCYページ
+   =============================================== */
 
-/* ==============
-   PRIVACY PAGE 
-   ==============*/
+
 .inner-narrow {
   max-width: 800px;
   margin: 0 auto;
