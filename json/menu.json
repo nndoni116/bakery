@@ -1,27 +1,27 @@
 [
   {
     "id": 1,
-    "title": "バゲット",
-    "description": "外はパリパリ、中はふんわりとした定番のフランスパン。",
-    "image": "images/baguette.png"
+    "title": "焼きナッツの「カンパーニュ・バトン」",
+    "description": "どこを噛んでもナッツの香ばしさと油脂分が感じられ、パンというよりも「ナッツの塊」を食べているような贅沢な食感です。",
+    "image": "images/campagne-nuts.jpg"
   },
   {
     "id": 2,
-    "title": "カンパーニュ",
-    "description": "自家製酵母が香る、ずっしりと大きな田舎パン。",
-    "image": "images/campagne.png"
+    "title": "無塩バターと蜂蜜の「ハード・クイニーアマン」",
+    "description": "一般的な甘いお菓子パンとは一線を画す、圧倒的な噛み応えと、キャラメリゼされた表面の苦味。甘さを最小限に抑えた「大人のハードスイーツ」です。",
+    "image": "images/aman.jpg"
   },
   {
     "id": 3,
-    "title": "クルミパン",
-    "description": "香ばしいクルミを贅沢に練り込んだハードパン。",
-    "image": "images/walnut.png"
+    "title": "粗挽き黒胡椒と岩塩の「ブラック・バゲット",
+    "description": "噛むたびに胡椒の刺激が弾ける、非常にドライで力強い味。食事パンというよりは、チーズや肉料理に合わせるための「道具としてのパン」です。",
+    "image": "images/black-baguette.png"
   },
   {
     "id": 4,
-    "title": "レーズンパン",
-    "description": "じっくり漬け込んだレーズンの甘みが広がる一品。",
-    "image": "images/raisin.jpg"
+    "title": "無塩バターと蜂蜜の「ハード・クイニーアマン」",
+    "description": "噛むたびに胡椒の刺激が弾ける、非常にドライで力強い味。食事パンというよりは、チーズや肉料理に合わせるための「道具としてのパン」です。",
+    "image": "images/images/black-baguette.png.jpg"
   },
   {
     "id": 5,

@@ -43,11 +43,19 @@
 
   --color-text2: #a19e9e;
 
+  --color-text3: #666666;
+
   --color-main: #F0EDE5;
+
+  --color-main2: #F5F5F5;
 
   --color-accent: #D7C4A3;
 
   --color-sub: #E0E0E0;
+
+  --color-sub2: #444;
+
+  --color-sub3: #fff;
 }
 
 /* :root {
@@ -146,7 +154,8 @@ header:has(.header-nav:hover) {
 }
 
 .header-nav {
-  margin: 0 30px 0 280px;
+  /* margin: 0 30px 0 280px; */
+  margin: 0 auto;
 }
 
 .header-nav ul {
@@ -166,6 +175,7 @@ header:has(.header-nav:hover) {
 
 .header-nav a h3 {
   font-size: 15px;
+  text-align: center;
 }
 
 .header-nav a p {
@@ -195,6 +205,10 @@ header.sub-header {
   backdrop-filter: none;
 } */
 
+.sub-header .header-content {
+  margin: 0 auto;
+}
+
 .sub-header .header-logo {
   height: 100%;
   display: flex;
@@ -203,10 +217,10 @@ header.sub-header {
 
 .sub-header .header-logo img {
   height: 100%;
-  max-height: 10vh;
+  max-height: 13vh;
   width: auto;
   object-fit: contain;
-  padding-left: 140px;
+  padding-left: 50px;
 }
 
 .sub-header .header-nav a {
@@ -376,7 +390,7 @@ footer {
   height: 100%;
   object-fit: cover;
   /* 画像の比率を保ったままエリアを埋める */
-  filter: grayscale(30%) brightness(70%);
+  /* filter: grayscale(30%) brightness(70%); */
   /* 少しグレー＆暗くして重厚感を出す */
 }
 
@@ -495,15 +509,19 @@ section {
 /* アバウトセクション */
 
 #about-section {
-  margin-top: 30px;
+  margin-top: 80px;
   background-size: cover;
-  background-color: var(--color-main);
+  background-color: var(--color-main2);
+}
+
+.about-content h2 {
+  color: var(--color-text3);
 }
 
 #about-section .about-mini-title {
   margin: 0;
   font-size: 10px;
-  color: #aaa;
+  color: var(--color-text2);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -535,7 +553,7 @@ section {
 
 .about-description p {
   font-size: 15px;
-  color: #555;
+  color: var(--color-text3);
   margin-top: 30px;
   margin-bottom: 50px;
 }
@@ -548,8 +566,8 @@ section {
 }
 
 .about-button:hover {
-  background: #444;
-  color: #fff;
+  background: var(--color-sub2);
+  color: var(--color-sub3);
 }
 
 /* メニューセクション */
@@ -567,9 +585,13 @@ section {
 #recent-menu-section .menu-mini-title {
   margin: 0;
   font-size: 10px;
-  color: #aaa;
+  color: var(--color-text2);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+#recent-menu-section h2 {
+  color: var(--color-text3);
 }
 
 #recent-menu-contents {
@@ -603,13 +625,13 @@ section {
 
 .menu-item h3 {
   font-size: 16px;
-  color: #444;
+  color: var(--color-text);
   margin-bottom: 5px;
 }
 
 .menu-item p {
   font-size: 14px;
-  color: #888;
+  color: var(--color-text3);
 }
 
 #recent-menu-section .view-all {
@@ -667,12 +689,12 @@ section {
   text-align: left;
   margin-bottom: 5px;
   font-size: 24px;
-  color: #444;
+  color: var(--color-text3);
 }
 
 .eng-title {
   font-size: 10px;
-  color: #aaa;
+  color: var(--color-text2);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 30px;
@@ -827,6 +849,21 @@ section {
   padding: 120px 0;
   text-align: center;
   background-color: #fff;
+  position: relative;
+}
+
+.about-concept .about-hb1 {
+  height: 130px;
+  position: absolute;
+  top: 100px;
+  left: 295px;
+}
+
+.about-concept .about-hb2 {
+  height: 130px;
+  position: absolute;
+  top: 100px;
+  left: 1130px;
 }
 
 .about-concept p {
@@ -956,9 +993,9 @@ section {
 }
 
 
-.about-eatin {
+/* .about-eatin {
   padding: 100px 0;
-  background-color: var(--color-base);
+  background-color: var(--color-main);
 }
 
 .section-title-center {
@@ -990,7 +1027,55 @@ section {
   width: 100%;
   height: auto;
   object-fit: cover;
-  /* 武骨な印象にするため、あえて角丸はつけない */
+
+} */
+
+.about-eatin {
+  padding: 80px 0; 
+  background-color: var(--color-main);
+}
+
+.section-title-center {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-title-center h2 {
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+  color: var(--color-text3);
+  margin: 0;
+}
+
+.section-title-center .eng-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;   
+  color: #888;             
+  margin: 8px 0 0 0;
+}
+
+
+.eat-in-main-image {
+  width: 100%;          
+  max-width: 500px;    
+  margin: 0 auto;
+  padding: 15px;       
+  background: #fff;    
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08); 
+  border: 1px solid #ddd;
+  margin-bottom: 20px; 
+}
+
+.eat-in-main-image img {
+  width: 100%;
+  height: auto;
+  display: block;     
+  filter: sepia(10%) contrast(105%); 
 }
 
 .eat-in-intro-text {
@@ -1277,29 +1362,45 @@ section {
    =============================================== */
 
 
-/*===今月のおすすめセクション===*/
+/*===メニューの最初のテキストセクション===*/
 
 
-.menu-recommend {
-  padding: 100px 0;
+.menu-intro {
+  padding: 120px 0; /* 上下の余白を多めにとって印象的に */
   background-color: #fcfcfc;
-}
-
-.recommend-grid {
-  display: flex;
-  gap: 30px;
-}
-
-.recommend-item {
-  flex: 1;
   text-align: center;
 }
 
-.recommend-item img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  margin-bottom: 20px;
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.menu-hb1 {
+  height: 120px;
+  position: absolute;
+  top: 30px;
+  left: -150px;
+}
+
+.menu-hb2 {
+  height: 120px;
+  position: absolute;
+  top: 30px;
+  left: 785px;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 2.2;      /* 行間を広くしてゆったりさせる */
+  letter-spacing: 0.1em; /* 文字の間を少し開ける */
+  color: #444;           /* 真っ黒より少し柔らかい色 */
+  margin-bottom: 2rem;
+}
+
+.intro-text:last-child {
+  margin-bottom: 0;
 }
 
 /* メニューカテゴリー全体 */
