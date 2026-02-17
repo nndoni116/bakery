@@ -1256,15 +1256,225 @@ section {
   border-color: #2c2c2c;
 }
 
-/* 石畳の装飾セクション（ABOUTと共通のデザイン） */
-.decoration-cobblestone {
-  width: 100%;
-  height: 100px;
-  background-image: url('../images/cobblestone.jpg');
-  background-size: cover;
-  background-position: center;
-  margin-top: 50px;
+
+
+/* ===============================================
+   MENU PAGE STYLES
+   =============================================== */
+
+
+/*===メニューの最初のテキストセクション===*/
+
+
+.menu-intro {
+  padding: 120px 0; /* 上下の余白を多めにとって印象的に */
+  background-color: var(--color-main);
+  text-align: center;
 }
+
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.menu-hb1 {
+  height: 120px;
+  position: absolute;
+  top: 30px;
+  left: -150px;
+}
+
+.menu-hb2 {
+  height: 120px;
+  position: absolute;
+  top: 30px;
+  left: 785px;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 2.2;      /* 行間を広くしてゆったりさせる */
+  letter-spacing: 0.1em; /* 文字の間を少し開ける */
+  color: var(--color-sub2);           /* 真っ黒より少し柔らかい色 */
+  margin-bottom: 2rem;
+}
+
+.intro-text:last-child {
+  margin-bottom: 0;
+}
+
+/* メニューカテゴリー全体 */
+.menu-categories {
+  padding: 100px 0;
+  background-color: var(--color-base);
+}
+
+.menu-group {
+  margin-bottom: 120px;
+}
+
+.menu-group:last-child {
+  margin-bottom: 0;
+}
+
+/* カテゴリタイトル（下線と英語を添えて） */
+.category-title {
+  font-size: 24px;
+  color: var(--color-text3);
+  border-bottom: 1px solid #2c2c2c;
+  padding-bottom: 15px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+}
+
+.category-title span {
+  font-size: 12px;
+  color: #aaa;
+  letter-spacing: 0.1em;
+}
+
+/* グリッドレイアウト（3列） */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 1:1:1の3列 */
+  gap: 60px 40px;
+  /* 縦60px、横40pxの隙間 */
+}
+
+.menu-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  /* 画像の比率を統一 */
+  object-fit: cover;
+  margin-bottom: 20px;
+  filter: grayscale(10%);
+  transition: 0.3s;
+}
+
+/* .menu-card:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+} */
+
+.menu-card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--color-sub2);
+}
+
+.menu-card p {
+  font-size: 14px;
+  color: var(--color-text3);
+  line-height: 1.6;
+}
+
+.menu-side {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.side-menu-container {
+  display: flex;
+  gap: 80px;
+  /* スープとドリンクの間隔 */
+  justify-content: center;
+}
+
+.side-menu-group {
+  flex: 1;
+  max-width: 400px;
+}
+
+.side-group-title {
+  font-size: 20px;
+  color: var(--color-text3);
+  border-bottom: 2px solid var(--color-main);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  letter-spacing: 0.2em;
+}
+
+.side-menu-group dt {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--color-sub2);
+  margin-bottom: 5px;
+}
+
+.side-menu-group dd {
+  font-size: 13px;
+  color: var(--color-text3);
+  margin-bottom: 25px;
+  margin-left: 0;
+}
+
+.side-menu-group .price {
+  font-family: serif;
+}
+
+/* ランチセクション背景色（少しだけトーンを変えて区切りを意識） */
+.menu-lunch {
+  padding: 100px 0;
+  background-color: var(--color-main);
+  border-top: 1px solid var(--color-sub);
+}
+
+/* 価格タグの装飾 */
+.menu-card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.menu-card-img-wrapper .price {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--color-sub2);
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+/* ランチの注意書き */
+.lunch-note {
+  margin-top: 60px;
+  text-align: center;
+  padding: 30px;
+  border: 1px solid var(--color-acc);
+  background-color: #fff;
+}
+
+.lunch-note p {
+  font-size: 13px;
+  color: var(--color-text3);
+  line-height: 2;
+  margin: 0;
+}
+
+/* 既存のmenu-cardとの微調整 */
+.menu-lunch .menu-card h4 {
+  color: var(--color-text3);
+  /* ランチタイトルをメインカラーに */
+  margin-top: 10px;
+}
+
+.menu-lunch .menu-card img {
+  margin-bottom: 0;
+  /* ラッパーで余白を制御するため */
+  filter: none;
+  /* 料理は美味しそうに見せるためグレースケールを解除 */
+}
+
+
 
 /* ===============================================
    CONTACT PAGE STYLES
@@ -1357,221 +1567,7 @@ section {
   background-color: #555;
 }
 
-/* ===============================================
-   MENU PAGE STYLES
-   =============================================== */
 
-
-/*===メニューの最初のテキストセクション===*/
-
-
-.menu-intro {
-  padding: 120px 0; /* 上下の余白を多めにとって印象的に */
-  background-color: #fcfcfc;
-  text-align: center;
-}
-
-.intro-content {
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.menu-hb1 {
-  height: 120px;
-  position: absolute;
-  top: 30px;
-  left: -150px;
-}
-
-.menu-hb2 {
-  height: 120px;
-  position: absolute;
-  top: 30px;
-  left: 785px;
-}
-
-.intro-text {
-  font-size: 1.1rem;
-  line-height: 2.2;      /* 行間を広くしてゆったりさせる */
-  letter-spacing: 0.1em; /* 文字の間を少し開ける */
-  color: #444;           /* 真っ黒より少し柔らかい色 */
-  margin-bottom: 2rem;
-}
-
-.intro-text:last-child {
-  margin-bottom: 0;
-}
-
-/* メニューカテゴリー全体 */
-.menu-categories {
-  padding: 100px 0;
-  background-color: #fff;
-}
-
-.menu-group {
-  margin-bottom: 120px;
-}
-
-.menu-group:last-child {
-  margin-bottom: 0;
-}
-
-/* カテゴリタイトル（下線と英語を添えて） */
-.category-title {
-  font-size: 24px;
-  color: #2c2c2c;
-  border-bottom: 1px solid #2c2c2c;
-  padding-bottom: 15px;
-  margin-bottom: 40px;
-  display: flex;
-  align-items: baseline;
-  gap: 15px;
-}
-
-.category-title span {
-  font-size: 12px;
-  color: #aaa;
-  letter-spacing: 0.1em;
-}
-
-/* グリッドレイアウト（3列） */
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* 1:1:1の3列 */
-  gap: 60px 40px;
-  /* 縦60px、横40pxの隙間 */
-}
-
-.menu-card img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  /* 画像の比率を統一 */
-  object-fit: cover;
-  margin-bottom: 20px;
-  filter: grayscale(10%);
-  transition: 0.3s;
-}
-
-.menu-card:hover img {
-  filter: grayscale(0%);
-  transform: scale(1.02);
-}
-
-.menu-card h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.menu-card p {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.6;
-}
-
-.menu-side {
-  padding: 80px 0;
-  background-color: #fff;
-}
-
-.side-menu-container {
-  display: flex;
-  gap: 80px;
-  /* スープとドリンクの間隔 */
-  justify-content: center;
-}
-
-.side-menu-group {
-  flex: 1;
-  max-width: 400px;
-}
-
-.side-group-title {
-  font-size: 20px;
-  color: var(--color-main);
-  border-bottom: 2px solid var(--color-main);
-  padding-bottom: 10px;
-  margin-bottom: 30px;
-  letter-spacing: 0.2em;
-}
-
-.side-menu-group dt {
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  font-size: 15px;
-  color: var(--color-text);
-  margin-bottom: 5px;
-}
-
-.side-menu-group dd {
-  font-size: 13px;
-  color: #888;
-  margin-bottom: 25px;
-  margin-left: 0;
-}
-
-.side-menu-group .price {
-  font-family: serif;
-}
-
-/* ランチセクション背景色（少しだけトーンを変えて区切りを意識） */
-.menu-lunch {
-  padding: 100px 0;
-  background-color: var(--color-base);
-  border-top: 1px solid var(--color-sub);
-}
-
-/* 価格タグの装飾 */
-.menu-card-img-wrapper {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.menu-card-img-wrapper .price {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: var(--color-main);
-  color: #fff;
-  padding: 5px 15px;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 0.1em;
-}
-
-/* ランチの注意書き */
-.lunch-note {
-  margin-top: 60px;
-  text-align: center;
-  padding: 30px;
-  border: 1px solid var(--color-sub);
-  background-color: #fff;
-}
-
-.lunch-note p {
-  font-size: 13px;
-  color: var(--color-text);
-  line-height: 2;
-  margin: 0;
-}
-
-/* 既存のmenu-cardとの微調整 */
-.menu-lunch .menu-card h4 {
-  color: var(--color-main);
-  /* ランチタイトルをメインカラーに */
-  margin-top: 10px;
-}
-
-.menu-lunch .menu-card img {
-  margin-bottom: 0;
-  /* ラッパーで余白を制御するため */
-  filter: none;
-  /* 料理は美味しそうに見せるためグレースケールを解除 */
-}
 
 /* ===============================================
     ACCESSページ
