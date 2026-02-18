@@ -220,7 +220,7 @@ header.sub-header {
   max-height: 13vh;
   width: auto;
   object-fit: contain;
-  padding-left: 50px;
+  padding-left: 25px;
 }
 
 .sub-header .header-nav a {
@@ -542,13 +542,13 @@ section {
 .hb-img1 {
   position: absolute;
   top: 30px;
-  left: 200px;
+  left: 20%;
 }
 
 .hb-img2 {
   position: absolute;
   top: 30px;
-  left: 730px;
+  left: 69%;
 }
 
 .about-description p {
@@ -849,21 +849,25 @@ section {
   padding: 120px 0;
   text-align: center;
   background-color: #fff;
+  /* position: relative; */
+}
+
+#inner-about-contents {
   position: relative;
 }
 
 .about-concept .about-hb1 {
   height: 130px;
   position: absolute;
-  top: 100px;
-  left: 295px;
+  top: -20px;
+  left: 6%;
 }
 
 .about-concept .about-hb2 {
   height: 130px;
   position: absolute;
-  top: 100px;
-  left: 1130px;
+  top: -20px;
+  left: 85%;
 }
 
 .about-concept p {
