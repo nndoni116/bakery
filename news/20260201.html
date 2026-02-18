@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../style.css">
   <title>期間限定のメニュー”ショコラ・リュスティック”が登場 | ハードパン</title>
-  <style>
+   <style>
     /* 全体のベース（共通設定がある場合は調整してください） */
 body {
   background-color: #fcfaf5; /* 柔らかなクリーム色 */
@@ -86,6 +86,64 @@ body {
 .btn-back:hover {
   background-color: #6d5454;
   transform: translateY(-2px);
+}
+
+/* ===============================================
+   NEWS DETAIL RESPONSIVE (記事詳細のレスポンシブ)
+   =============================================== */
+
+@media screen and (max-width: 768px) {
+  /* --- 1. コンテナの調整 --- */
+  .news-detail {
+    margin: 30px 10px; /* 上下の余白を減らし、左右に少し隙間を作る */
+    padding: 30px 20px; /* 内側の余白を少し詰める */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03); /* 影を軽くしてスッキリさせる */
+  }
+
+  /* --- 2. タイトルの調整 --- */
+  .news-title {
+    font-size: 1.4rem; /* スマホで2〜3行に綺麗に収まるサイズ */
+    margin-bottom: 12px;
+  }
+
+  .news-date {
+    font-size: 0.85rem;
+  }
+
+  /* --- 3. 本文の読みやすさ --- */
+  .news-content {
+    font-size: 1rem;
+    line-height: 1.7; /* 行間をスマホ向けに微調整 */
+    margin-bottom: 40px;
+  }
+
+  /* 記事内に画像が入った時のためのレスポンシブ設定（追加） */
+  .news-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 20px 0;
+  }
+
+  /* --- 4. 戻るボタン --- */
+  .btn-back {
+    width: 100%; /* スマホではボタンを大きくして押しやすく */
+    padding: 15px 0;
+    box-sizing: border-box; /* paddingを含めて100%にする */
+  }
+}
+
+/* さらに小さい画面（スマホ縦持ち） */
+@media screen and (max-width: 480px) {
+  .news-detail {
+    margin: 20px 0; /* 画面端まで白背景を広げる（モダンな印象） */
+    border-radius: 0; /* 端まで広げる場合は角丸をなくす */
+    padding: 30px 15px;
+  }
+
+  .news-title {
+    font-size: 1.25rem;
+  }
 }
   </style>
 </head>

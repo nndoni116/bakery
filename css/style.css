@@ -327,6 +327,120 @@ footer {
 
 
 
+@media screen and (max-width: 768px) {
+
+  /* --- ヘッダーの調整 --- */
+  header {
+    height: auto; /* 高さを固定せず中身に合わせる */
+    position: relative; /* 固定表示をやめて自然な配置にする（お好みでfixedでも可） */
+    background-color: var(--color-header); /* 背景色をしっかりつける */
+    padding: 10px 0;
+  }
+
+  .header-content {
+    flex-direction: column; /* 縦並びにする */
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  /* ロゴの配置変更 */
+  .header-logo {
+    position: static; /* 絶対配置を解除 */
+    margin-bottom: 10px; /* 下に余白 */
+    text-align: center;
+  }
+
+  .header-logo a {
+    display: inline-block;
+  }
+
+  .header-logo img {
+    height: 80px; /* スマホ用に少し小さく */
+    width: auto;
+  }
+
+  /* ナビゲーションの調整 */
+  .header-nav {
+    width: 100%;
+    margin: 0;
+    overflow-x: auto; /* 横スクロールを可能に（メニューが多い場合） */
+    white-space: nowrap;
+    padding-bottom: 5px; /* スクロールバーとの干渉を防ぐ */
+  }
+
+  .header-nav ul {
+    display: flex;
+    justify-content: center; /* 中央寄せ */
+    flex-wrap: wrap; /* 画面幅が狭ければ折り返す */
+    gap: 15px 20px; /* 上下の間隔 15px, 左右の間隔 20px */
+    padding: 0 10px;
+  }
+
+  .header-nav a {
+    font-size: 14px; /* 文字サイズを少し小さく */
+    letter-spacing: 0.1em;
+    display: block;
+    text-align: center;
+  }
+
+  .header-nav a h3 {
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .header-nav a p {
+    font-size: 10px;
+    color: var(--color-text2);
+  }
+
+  /* --- フッターの調整 --- */
+  footer {
+    padding: 30px 0;
+  }
+
+  .footer-shop-name {
+    font-size: 24px;
+  }
+
+  /* サイトマップを2列にする、または縦並びにする */
+  .footer-site-map ul {
+    flex-direction: column; /* 縦並び */
+    gap: 15px;
+    padding: 20px 0;
+  }
+  
+  /* もしくは2列にしたい場合はこちらを使ってください
+  .footer-site-map ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 30px;
+  }
+  */
+
+  .footer-sns-links {
+    gap: 25px;
+    margin-bottom: 30px;
+  }
+}
+
+/* スマホ向け (画面幅 480px以下) の微調整 */
+@media screen and (max-width: 480px) {
+  .header-nav ul {
+    gap: 10px 15px; /* さらに間隔を詰める */
+  }
+  
+  .header-nav a h3 {
+    font-size: 11px;
+  }
+
+  .footer-info p {
+    font-size: 12px;
+  }
+}
+
+
+
 /* ===============================================
     トップページ
    =============================================== */
@@ -515,7 +629,7 @@ section {
 }
 
 .about-content h2 {
-  color: var(--color-text3);
+  color: var(--color-text);
 }
 
 #about-section .about-mini-title {
@@ -591,7 +705,7 @@ section {
 }
 
 #recent-menu-section h2 {
-  color: var(--color-text3);
+  color: var(--color-text);
 }
 
 #recent-menu-contents {
@@ -689,7 +803,7 @@ section {
   text-align: left;
   margin-bottom: 5px;
   font-size: 24px;
-  color: var(--color-text3);
+  color: var(--color-text);
 }
 
 .eng-title {
@@ -794,6 +908,182 @@ section {
 
 
 /* ===============================================
+   MAIN CONTENT RESPONSIVE (メインコンテンツのレスポンシブ)
+   =============================================== */
+
+
+
+
+/* タブレット・スマホ向け (画面幅 768px以下) */
+@media screen and (max-width: 768px) {
+
+  /* --- 共通設定 --- */
+  section {
+    margin-bottom: 60px; /* セクション間の余白を半分に */
+    padding: 0 20px;
+  }
+
+  /* --- メインビジュアル --- */
+  .main-visual {
+    height: 60vh; /* スマホでは少し高さを抑える */
+  }
+
+  .main-title p {
+    font-size: 18px; /* タイトル文字を少し小さく */
+    width: 80%; /* 横幅を確保して改行を防ぐ、または自然にする */
+    margin: 0 auto;
+  }
+
+  /* --- ニュースセクション --- */
+  #news-section {
+    height: auto; /* 高さを固定せず中身に合わせる */
+    padding: 30px 0;
+  }
+
+  .news-container {
+    flex-direction: column; /* 縦並びにする */
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+
+  .news-left-content {
+    flex-direction: column; /* タイトルとリストを縦並びに */
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .news-title {
+    align-items: flex-start; /* 左寄せ */
+    padding-right: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #ccc; /* スマホでは区切り線を入れると分かりやすい */
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .news-title h2 {
+    font-size: 16px;
+  }
+
+  #news-list {
+    width: 100%;
+    padding: 0;
+  }
+
+  #news-list li {
+    padding: 10px 0; /* 上下の余白を少し詰める */
+    border-bottom: 1px solid rgba(255,255,255,0.1); /* 薄い線で区切る */
+  }
+
+  /* 「一覧を見る」ボタンの調整 */
+  .news-divider {
+    display: none; /* スマホでは縦線は消す */
+  }
+
+  #news-section .view-all {
+    align-self: flex-end; /* 右下に配置 */
+    margin-top: 10px;
+  }
+
+  /* --- ABOUTセクション --- */
+  #about-section {
+    margin-top: 40px;
+  }
+
+  .about-content {
+    padding: 30px 0;
+  }
+  
+  /* 装飾画像（浮いているパン）はスマホだと文字に重なるため非表示、
+     もしくは static にして配置を変えるのが一般的 */
+  .hb-img1, .hb-img2 {
+    display: none; 
+  }
+
+  .about-description p {
+    font-size: 14px;
+    margin: 20px 0 30px 0;
+    line-height: 1.8;
+    text-align: left; /* スマホは左揃えの方が読みやすい場合が多い */
+  }
+
+  /* --- メニューセクション --- */
+  #recent-menu-contents {
+    grid-template-columns: repeat(1, 1fr); /* 1列にする */
+    gap: 40px;
+  }
+
+  .menu-item img {
+    width: 100%; /* 画像を横幅いっぱいに */
+    max-width: 300px; /* 大きくなりすぎないように制限 */
+    margin: 0 auto 15px auto;
+    display: block;
+  }
+
+  /* --- イートインセクション --- */
+  #eat-in-section {
+    padding: 60px 0;
+  }
+
+  .eat-in-container {
+    flex-direction: column; /* 画像とテキストを縦並びに */
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .eat-in-image img {
+    height: 250px; /* 高さを調整 */
+    box-shadow: 10px 10px 0 #e9ecef; /* 影を少し小さく */
+  }
+
+  .eat-in-text h2 {
+    font-size: 20px;
+  }
+
+  /* --- 店舗情報セクション --- */
+  #shop-info-section {
+    padding: 60px 0;
+  }
+
+  .shop-info-container {
+    flex-direction: column; /* 情報と地図を縦並びに */
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .shop-details {
+    width: 100%;
+  }
+
+  .shop-map {
+    width: 100%;
+  }
+
+  .shop-map iframe {
+    height: 300px; /* 地図の高さをスマホ用に調整 */
+  }
+  
+  /* 定義リストの調整 */
+  .info-item {
+    flex-direction: column; /* 項目名と内容を縦積みにする */
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .info-item dt {
+    width: 100%;
+    margin-bottom: 2px;
+    color: var(--color-text); /* 見出しっぽく色を濃く */
+  }
+
+  .info-item dd {
+    padding-left: 10px;
+  }
+}
+
+
+
+/* ===============================================
     ABOUTページ
    =============================================== */
 
@@ -872,7 +1162,7 @@ section {
 
 .about-concept p {
   line-height: 2.2;
-  color: #555;
+  color: var(--color-sub2);
   font-size: 15px;
 }
 
@@ -1051,7 +1341,7 @@ section {
 .section-title-center h2 {
   font-size: 1.8rem;
   letter-spacing: 0.1em;
-  color: var(--color-text3);
+  color: var(--color-text);
   margin: 0;
 }
 
@@ -1059,7 +1349,7 @@ section {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.3em;   
-  color: #888;             
+  color: var(--color-text2);             
   margin: 8px 0 0 0;
 }
 
@@ -1090,7 +1380,7 @@ section {
 .eat-in-intro-text p {
   font-size: 16px;
   line-height: 2;
-  color: var(--color-text);
+  color: var(--color-sub2);
   margin-bottom: 20px;
 }
 
@@ -1139,7 +1429,7 @@ section {
 
 .section-title-center p {
   font-size: 10px;
-  color: #aaa;
+  color: var(--color-text2);
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
@@ -1169,6 +1459,130 @@ section {
 }
 
 
+/* ===============================================
+   ABOUT PAGE RESPONSIVE (ABOUTページのレスポンシブ)
+   =============================================== */
+
+@media screen and (max-width: 768px) {
+  /* --- 1. 共通設定 --- */
+  .inner {
+    padding: 0 20px; /* 左右の余白を縮小 */
+  }
+
+  /* --- 2. メインビジュアル --- */
+  .about-hero {
+    height: 25vh; /* スマホでは高さを少し抑える */
+  }
+
+  .about-hero-title h2 {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  /* --- 3. コンセプト --- */
+  .about-concept {
+    padding: 60px 0; /* 上下余白を詰める */
+  }
+
+  .about-concept .about-hb1,
+  .about-concept .about-hb2 {
+    display: none; /* スマホでは装飾用の浮遊画像を非表示に */
+  }
+
+  .about-concept p {
+    font-size: 14px;
+    text-align: left; /* 長い文章はスマホでは左寄せが読みやすい */
+    line-height: 2;
+  }
+
+  /* --- 4. 三つのこだわり --- */
+  .point-item {
+    padding: 60px 0;
+    background-attachment: scroll; /* モバイルでは固定背景を解除（動作を軽くするため） */
+  }
+
+  .point-inner,
+  .point-right-img .point-inner {
+    flex-direction: column; /* 全て縦並びにする */
+    gap: 0; /* 画像とテキストの隙間は下のpaddingで調整 */
+    padding: 0 20px;
+  }
+
+  .point-image {
+    width: 100%;
+  }
+
+  .point-image img {
+    height: 250px; /* 画像の高さを固定 */
+    box-shadow: 10px 10px 0 rgba(44, 44, 44, 0.8); /* 影を少し小さく */
+  }
+
+  .point-text {
+    width: calc(100% - 20px); /* 影の分を考慮して少し幅を調整 */
+    margin: -40px auto 0; /* 画像に少し被せるスタイル */
+    padding: 30px 20px;
+  }
+
+  .point-text .number {
+    font-size: 30px;
+  }
+
+  .point-text h4 {
+    font-size: 18px;
+  }
+
+  /* --- 5. イートインスペース --- */
+  .about-eatin {
+    padding: 60px 0;
+  }
+
+  .eat-in-main-image {
+    max-width: 100%; /* スマホでは横幅いっぱい */
+    padding: 10px;
+  }
+
+  .eat-in-intro-text p {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .detail-row {
+    flex-direction: column; /* 項目名と内容を縦並びに */
+    gap: 5px;
+  }
+
+  .detail-row dt,
+  .detail-row dd {
+    width: 100%;
+    text-align: left;
+  }
+
+  .detail-row dd {
+    padding-left: 10px;
+    color: #666;
+  }
+
+  /* --- 6. 会社概要 --- */
+  .company-overview {
+    padding: 60px 0 100px 0;
+  }
+
+  .company-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .company-row dt {
+    width: 100%;
+    font-size: 13px;
+    color:var(--color-text);
+  }
+
+  .company-row dd {
+    font-size: 14px;
+    padding-left: 10px;
+  }
+}
 
 /* ===============================================
     NEWSページ
@@ -1259,6 +1673,87 @@ section {
   color: #fff;
   border-color: #2c2c2c;
 }
+
+
+
+/* ===============================================
+   NEWS PAGE RESPONSIVE (NEWSページのレスポンシブ)
+   =============================================== */
+
+@media screen and (max-width: 768px) {
+  /* --- 1. セクション全体の余白 --- */
+  .news-list-section {
+    padding: 40px 0 80px; /* 上下の余白を圧縮 */
+    min-height: auto;
+  }
+
+  /* --- 2. ニュースリストの組み替え --- */
+  .news-archive-item a {
+    flex-direction: column; /* 横並びから縦並びに変更 */
+    align-items: flex-start; /* 左寄せに揃える */
+    padding: 20px 10px; /* 余白を調整 */
+  }
+
+  /* 日付の調整 */
+  .news-archive-item .date {
+    width: auto; /* 固定幅を解除 */
+    font-size: 13px;
+    margin-bottom: 8px; /* カテゴリとの間隔 */
+  }
+
+  /* カテゴリラベルの調整 */
+  .news-archive-item .category {
+    margin-right: 0;
+    margin-bottom: 12px; /* タイトルとの間隔 */
+    min-width: 80px;
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+
+  /* タイトルの調整 */
+  .news-archive-item .title {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #2c2c2c; /* 文字色を少し強調 */
+  }
+
+  /* --- 3. ページネーションの調整 --- */
+  .pagination {
+    gap: 10px; /* ボタン同士の隙間を少し狭く */
+    margin-top: 20px;
+  }
+
+  .page-btn {
+    width: 35px; /* ボタンを少し小さくして指で押しやすく */
+    height: 35px;
+    font-size: 14px;
+  }
+
+  /* --- 4. 装飾（石畳など） --- */
+  .decoration-cobblestone {
+    height: 20px; /* 装飾が大きすぎないように調整 */
+  }
+}
+
+/* さらに小さい画面（スマホ縦持ち）用 */
+@media screen and (max-width: 480px) {
+  .news-archive-item .title {
+    font-size: 14px; /* 文字サイズを微調整 */
+  }
+  
+  /* 日付とカテゴリを横に並べたい場合はこちら */
+  /*
+  .news-archive-item .date {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  .news-archive-item .category {
+    display: inline-block;
+  }
+  */
+}
+
 
 
 
@@ -1479,6 +1974,101 @@ section {
 }
 
 
+/* ===============================================
+   MENU PAGE RESPONSIVE (MENUページのレスポンシブ)
+   =============================================== */
+
+@media screen and (max-width: 768px) {
+  /* --- 1. イントロセクション --- */
+  .menu-intro {
+    padding: 60px 0;
+  }
+
+  /* 浮いているパンの画像を非表示（画面幅を圧迫するため） */
+  .menu-hb1, .menu-hb2 {
+    display: none;
+  }
+
+  .intro-content {
+    max-width: 100%;
+  }
+
+  .intro-text {
+    font-size: 14px;
+    text-align: left; /* スマホでは左寄せが読みやすい */
+    padding: 0 10px;
+  }
+
+  /* --- 2. メニューグリッドの調整 --- */
+  .menu-categories {
+    padding: 60px 0;
+  }
+
+  .menu-group {
+    margin-bottom: 60px;
+  }
+
+  .category-title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  /* 全てのグリッドを一旦1列にする（新商品・季節限定・ランチ用） */
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* 定番商品（3番目のmenu-group）だけは2列にして一覧性を出す */
+  .menu-group:nth-of-type(3) .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 15px;
+  }
+
+  /* 定番商品の時は文字を少し小さく調整 */
+  .menu-group:nth-of-type(3) .menu-card h4 {
+    font-size: 15px;
+  }
+
+  .menu-card h4 {
+    font-size: 17px;
+  }
+
+  .menu-card p {
+    font-size: 13px;
+  }
+
+  /* --- 3. サイドメニュー（スープ・ドリンク） --- */
+  .menu-side {
+    padding: 40px 0;
+  }
+
+  .side-menu-container {
+    flex-direction: column; /* 縦並びにする */
+    gap: 40px;
+  }
+
+  .side-menu-group {
+    max-width: 100%;
+  }
+
+  .side-group-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  /* --- 4. ランチセット --- */
+  .menu-lunch {
+    padding: 60px 0;
+  }
+
+
+}
+
+  /* 価格タグがスマホでも見やすいように少し調整 */
+
+
+
 
 /* ===============================================
    CONTACT PAGE STYLES
@@ -1572,9 +2162,80 @@ section {
 }
 
 
+/* ===============================================
+   CONTACT PAGE RESPONSIVE (CONTACTページのレスポンシブ)
+   =============================================== */
+
+@media screen and (max-width: 768px) {
+  /* --- 1. セクション余白の調整 --- */
+  .contact-form-section {
+    padding: 60px 0;
+  }
+
+  /* --- 2. イントロテキスト --- */
+  .contact-intro {
+    margin-bottom: 40px;
+    padding: 0 10px;
+    text-align: left; /* スマホでは左寄せの方が読みやすい */
+  }
+
+  /* 強制改行(<br>)をスマホでは無効化して自然な流れにする */
+  .contact-intro br {
+    display: none;
+  }
+
+  /* --- 3. フォーム要素の調整 --- */
+  .contact-form {
+    width: 100%;
+    padding: 0 5px; /* 画面端との微調整 */
+  }
+
+  .form-group {
+    margin-bottom: 25px;
+  }
+
+  .form-group label {
+    font-size: 15px; /* ラベルを少し見やすく */
+    margin-bottom: 12px;
+  }
+
+  /* 入力欄のパディングを少し調整 */
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    padding: 12px;
+    font-size: 16px; /* iOSの自動ズーム防止 */
+    -webkit-appearance: none; /* iOS特有の内側の影を消す */
+  }
+
+  /* --- 4. 送信ボタン --- */
+  .form-submit {
+    margin-top: 40px;
+  }
+
+  .submit-btn {
+    width: 100%; /* スマホではボタンを横幅いっぱいに（押しやすさ重視） */
+    padding: 18px 0;
+    font-size: 15px;
+  }
+}
+
+/* さらに小さい端末用の調整 */
+@media screen and (max-width: 480px) {
+  .contact-form-section {
+    padding: 40px 0;
+  }
+  
+  .form-group .required {
+    margin-left: 5px;
+    font-size: 9px;
+  }
+}
+
+
 
 /* ===============================================
-    ACCESSページ
+    SHOP INFOページ
    =============================================== */
 
 
@@ -1627,6 +2288,83 @@ section {
 
 
 /* ===============================================
+   SHOP INFO RESPONSIVE (店舗情報のレスポンシブ)
+   =============================================== */
+
+@media screen and (max-width: 768px) {
+  /* --- 1. レイアウトを縦並びに変更 --- */
+  .access-container {
+    flex-direction: column; /* 横並びを解除 */
+    gap: 40px; /* 地図と情報の間の隙間 */
+    padding: 40px 0; /* 上下の余白を圧縮 */
+  }
+
+  /* --- 2. 地図エリアの調整 --- */
+  .access-map {
+    width: 100%;
+    order: 1; /* 地図を先に表示 */
+  }
+
+  .map-dummy {
+    height: 300px; /* スマホでは高さを少し抑えてスクロールしやすく */
+  }
+
+  /* 実際のGoogle Map(iframe)を埋め込んだ時用の設定 */
+  .access-map iframe {
+    width: 100% !important;
+    height: 300px !important;
+  }
+
+  /* --- 3. 店舗情報エリアの調整 --- */
+  .access-info {
+    width: 100%;
+    order: 2;
+  }
+
+  .info-box {
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+
+  .info-box h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .info-box dl dt {
+    font-size: 15px;
+    margin-top: 12px;
+  }
+
+  .info-box dl dd {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* --- 4. 駐車場案内の調整 --- */
+  .info-box p {
+    font-size: 14px;
+    line-height: 1.7;
+    background-color: #f9f9f9; /* 少し背景色をつけて読みやすく */
+    padding: 15px;
+    border-radius: 4px;
+  }
+}
+
+/* さらに小さい画面（スマホ縦） */
+@media screen and (max-width: 480px) {
+  .map-dummy {
+    height: 250px; /* よりコンパクトに */
+  }
+  
+  .access-container {
+    padding: 30px 0 60px;
+  }
+}
+
+
+
+/* ===============================================
     PRIVCYページ
    =============================================== */
 
@@ -1655,4 +2393,52 @@ section {
   line-height: 1.8;
   color: #555;
   margin-bottom: 15px;
+}
+
+
+/* ===============================================
+   PRIVACY PAGE RESPONSIVE (プライバシーポリシー)
+   =============================================== */
+
+@media screen and (max-width: 768px) {
+  /* --- 1. 全体の余白調整 --- */
+  .inner-narrow {
+    padding: 60px 20px; /* 上下の余白を100pxから60pxに圧縮 */
+  }
+
+  /* --- 2. 見出しの調整 --- */
+  .privacy-section h1 {
+    font-size: 22px; /* スマホで見ても圧迫感のないサイズに */
+    margin-bottom: 30px;
+  }
+
+  .privacy-section h2 {
+    font-size: 18px; /* 本文より少し大きく、メリハリをつける */
+    margin: 30px 0 15px;
+    padding-bottom: 8px;
+  }
+
+  /* --- 3. 本文の読みやすさ --- */
+  .privacy-section p,
+  .privacy-section li {
+    font-size: 14px; /* 小さすぎず、読みやすいサイズ */
+    line-height: 1.7; /* 行間を少し詰め、まとまりを出す */
+    margin-bottom: 12px;
+  }
+
+  /* リストの左側の余白を少し調整 */
+  .privacy-section ul {
+    padding-left: 20px;
+  }
+}
+
+/* さらに小さい画面用の微調整 */
+@media screen and (max-width: 480px) {
+  .privacy-section h1 {
+    font-size: 20px;
+  }
+  
+  .inner-narrow {
+    padding: 40px 15px;
+  }
 }
