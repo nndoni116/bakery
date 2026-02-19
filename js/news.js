@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
 
-  $.ajax({url: './json/news.json', dataType: 'json'})
+  $.ajax({url: '../json/news.json', dataType: 'json'})
   .done(function(data) {
     const recentNews = data.slice(0, 3);
     const $listContainer = $('#news-list');

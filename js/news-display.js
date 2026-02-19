@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentPage = 1;
     let allNewsData = [];
 
-    fetch('./json/news.json')
+    fetch('../json/news.json')
         .then(response => response.json())
         .then(data => {
             allNewsData = data;

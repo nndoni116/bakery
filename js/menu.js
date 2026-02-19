@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
 
-  $.ajax({ url: './json/menu.json', dataType: 'json' })
+  $.ajax({ url: '../json/menu.json', dataType: 'json' })
     .done(function (data) {
       const recentMenu = data.slice(0, 3);
       const $menuContainer = $('#recent-menu-contents');
